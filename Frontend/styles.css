@@ -1,0 +1,280 @@
+/* --- Form Page Base Styling --- */
+/* I have to keep in mind: lower entries replace earlyer entries */
+body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #f5f3f1;
+    margin: 0;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* Link buttons */
+a.button {
+    display: inline-block;
+    background: #6d4c41;          /* Warm brown (nice consistent theme) */
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.25s, transform 0.15s;
+}
+
+/* Hover effect */
+a.button:hover {
+    background: #5c4038;          /* Slightly darker */
+}
+
+/* Press animation */
+a.button:active {
+    transform: scale(0.97);
+}
+
+
+/* Center form container */
+.form-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.form-wrapper h1,
+.form-wrapper h2 {
+    margin-top: 0;
+    color: #6d4c41;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #4b3a34;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #d8cfc9;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #faf9f7;
+    transition: border 0.25s, box-shadow 0.25s;
+}
+
+/* Focus state */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #6d4c41;
+    box-shadow: 0 0 4px rgba(109, 76, 65, 0.3);
+    outline: none;
+}
+
+/* Textarea sizing */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Buttons */
+button,
+input[type="submit"] {
+    display: inline-block;
+    background: #6d4c41;
+    color: #fff;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.25s, transform 0.15s;
+}
+
+/* Button hover */
+button:hover,
+input[type="submit"]:hover {
+    background: #5c4038;
+}
+
+/* Button press effect */
+button:active,
+input[type="submit"]:active {
+    transform: scale(0.97);
+}
+
+/* Help text / small notes */
+.small-text {
+    font-size: 0.85rem;
+    color: #6d6d6d;
+    margin-top: -12px;
+    margin-bottom: 16px;
+}
+
+/* Form field groups (optional) */
+.form-group {
+    margin-bottom: 22px;
+}
+
+/* Error message styling */
+.error-message {
+    background: #ffe8e6;
+    color: #b3362b;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #f2c2be;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+/* Success message */
+.success-message {
+    background: #e7f6e9;
+    color: #396b3f;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #b9e4c0;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+/* Make the whole page a centered column */
+/* For phone users basically */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Use flex column to center content; keep a little top breathing room */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* center horizontally */
+    justify-content: flex-start; /* start from top but centered horizontally */
+    min-height: 100vh;
+    padding: 40px 20px;        /* desktop default */
+    box-sizing: border-box;
+    background: #f5f3f1;       /* keep your page bg */
+}
+
+/* Slightly constrain page content and center text by default */
+body > h1,
+.button-container {
+    width: 100%;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Heading - centered and comfortable spacing */
+h1 {
+    text-align: center;
+    margin: 6px 0 22px;
+    font-size: 1.8rem;
+    color: #6d4c41;
+    font-weight: 700;
+}
+
+/* Button container: center children, wrap when needed */
+.button-container {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 6px;
+    margin-bottom: 20px;
+}
+
+/* Anchor buttons - keep them visually consistent and centered */
+a.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    padding: 12px 22px;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.12s, box-shadow 0.12s;
+}
+
+/* spacing for icon/emoji inside the button (emoji first-child) */
+a.button > *:first-child {
+    margin-right: 8px;
+}
+
+/* Focus and keyboard accessibility */
+a.button:focus {
+    outline: 3px solid rgba(109,76,65,0.18);
+    outline-offset: 3px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* Make buttons visually larger on hover (desktop) */
+@media (hover: hover) and (pointer: fine) {
+    a.button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 22px rgba(0,0,0,0.09);
+    }
+}
+
+/* Small screens: stack buttons vertically and make full-width */
+@media (max-width: 600px) {
+    body {
+        padding: 22px 14px; /* less outer padding on phones */
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+    }
+
+    .button-container {
+        gap: 10px;
+        padding: 0;
+    }
+
+    a.button {
+        width: 100%;
+        min-width: 0;
+        padding: 14px 16px;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+
+    /* If you want a visual separator between stacked buttons, uncomment: */
+    /* a.button + a.button { margin-top: 6px; } */
+}
+
+/* Medium screens: moderate widths */
+@media (min-width: 601px) and (max-width: 900px) {
+    a.button {
+        min-width: 160px;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* optional: make emoji slightly larger inside buttons for better balance */
+a.button .emoji {
+    font-size: 1.05rem;
+    line-height: 1;
+}

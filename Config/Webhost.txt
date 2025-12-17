@@ -1,0 +1,7 @@
+DatabaseHost=
+DatabaseName=
+DatabaseUsername=
+DatabasePassword=
+FtpHost=4
+FtpUsername=
+FtpPassword=
